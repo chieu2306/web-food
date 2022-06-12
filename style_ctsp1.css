@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(233, 233, 233);
+    background-position: center;
+    background-repeat: cover;
+}
+#menuState{
+    display: none;
+}
+#main {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    line-height: 80px;
+    color: #fff;
+    background-color: #333;
+}
+
+.logo {
+        width: 35%;
+        font-size: 25px;
+        font-family: "Roboto";
+        letter-spacing: 7px;
+        padding-left: 5%;
+        text-align: left;
+    
+
+}
+.menu{
+    width: 65%;
+}
+
+.menu ul {
+    display: flex;
+    text-align: center;
+    width: auto;
+    padding-right: 5%;
+
+}
+
+.menu ul li {
+    list-style-type: none;
+    width: 120px;
+    text-align: center;
+
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 15px;
+    transition: all 0.25s ease-in-out;
+
+}
+
+.menu ul li a:hover {
+    display: block;
+    color: rgb(26, 83, 95);
+}
+
+#burger {
+    width: 48px;
+    height: 48px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#burger::before {
+    content: "";
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 4px;
+    position: absolute;
+    transform: translateY(6px);
+    background-color: white;
+    transition: all 0.25s ease-in-out;
+
+}
+
+#burger::after {
+    content: "";
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 4px;
+    position: absolute;
+    transform: translateY(-6px);
+    background-color: white;
+    transition: all 0.25s ease-in-out;
+
+}
+
+#burger.open::before {
+    transform: rotate(-45deg);
+}
+
+#burger.open::after {
+    transform: rotate(45deg);
+}
+
+#burger.open {
+    background-color: rgba(32, 29, 29, 0);
+}
+
+ 
+ .content{
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+}
+
+.content .content-sp{
+    display: flex;
+}
+#btn {
+    height: 40px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 7px;
+    
+}
+#btn button{
+    width: 45px;
+    height:39px;
+    border: none;
+    font-size:20px;
+    background-color: rgba(51, 51, 51, 0);
+}
+.content img{
+    width: 350px;
+}
+.content-sp b{
+    font-size: 30px;
+    color: red;
+}
+.content-sp p{
+    font-weight: 700;
+    font-size: 20px;
+
+}
+
+
+.footer{
+    background-color: rgb(107, 105, 105);
+    color: rgba(255, 255, 255, 0.529);
+    height: 90px;
+    text-align: center;
+    margin-top: 63px;
+}
+.footer p{
+    padding: 18px;
+    text-decoration: none;
+}
+
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+.footer p a:hover{
+    color: blue;
+}
+@media (max-width:768px) {
+   
+    .menu ul li a{
+        font-size: 12px;
+    }
+    .menu ul li {
+        width: 100px;
+    }
+    .content-sp img{
+        width: 220px;
+        height: 250px;
+    }
+}
+
+
+
+
+
+
+
