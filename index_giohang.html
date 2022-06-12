@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="./css/ctsp1.css">
+    <style>
+        
+        .header{
+            display: flex;
+        }
+        .header a{
+            float: right ;
+            text-decoration: none;
+            color: rgb(128, 126, 126);
+            font-size: 17px;
+        }
+        .header h3{
+            float: left;
+            box-shadow: 0 3px red;
+        }
+        #datarow img{
+            width: 150px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <div class="logo">FAST FOOD</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i> Trang Chủ </a></li>
+                    <li><a href="index_trangsp.html"><i class="fa-solid fa-user"></i> Thực Phẩm </a></li>
+                    <li><a href="index_gttv.html"><i class="fa-solid fa-gear"></i> Thành Viên </a></li>
+                    <li><a href="index_dangnhap.html"><i class="fa-solid fa-arrow-down-wide-short"></i> Đăng Nhập </a></li>
+                    <li><a href="index_giohang.html"><i class="fa-solid fa-right-to-bracket"></i> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-cart-dash" viewBox="0 0 15 20">
+                          <path d="M6.5 7a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"/>
+                          <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                        </svg>
+                       </a></li>              
+                      </ul>
+            </div>
+            <div id="burger"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1 class="text-center" style="box-shadow: 0 2px tomato;">Giỏ Hàng Của Bạn</h1>
+            <div class="row">
+                <div class="col col-md-12">
+                    <table class="table" style="margin-top: 50px;">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th></th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Đơn giá</th>
+                                <th>Thành tiền</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="datarow">
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/cache/584039753b87a8d227764e04fc461e3e/c/h/chicken-534x374px_fried-chicken_2.png" class="hinhdaidien">
+                                </td>
+                                <td>Gà Rán 9 Miếng</td>
+                                <td class="text-right" style="text-align: center;">1</td>
+                                <td class="text-right">290.000</td>
+                                <td class="text-right">290.000</td>
+                                <td>
+                                    <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                                        <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/cache/584039753b87a8d227764e04fc461e3e/v/a/value-534x374px_ddouble-burger.png" class="hinhdaidien">
+                                </td>
+                                <td>Burger Double Double</td>
+                                <td class="text-right" style="text-align: center;">2</td>
+                                <td class="text-right">59.000</td>
+                                <td class="text-right">118.000</td>
+                                <td>
+                                    <a id="delete_2" data-sp-ma="6" class="btn btn-danger btn-delete-sanpham">
+                                        <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/cache/584039753b87a8d227764e04fc461e3e/d/e/dessert-534x374px_chicken-skewer.png" class="hinhdaidien">
+                                </td>
+                                <td>Gà Xiêng Que</td>
+                                <td class="text-right" style="text-align: center;">4</td>
+                                <td class="text-right">50.000</td>
+                                <td class="text-right">200.000</td>
+                                <td>
+                                    <a id="delete_3" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
+                                        <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/cache/584039753b87a8d227764e04fc461e3e/d/e/dessert-534x374px_frenchfries.png" class="hinhdaidien">
+                                </td>
+                                <td>Khoai Tây Chiên</td>
+                                <td class="text-right" style="text-align: center;">1</td>
+                                <td class="text-right">28.000</td>
+                                <td class="text-right">28.000</td>
+                                <td>
+                                    <a id="delete_3" data-sp-ma="4" class="btn btn-danger btn-delete-sanpham">
+                                        <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-right"><b>Tổng Tiền</b></td>
+                                <td class="text-right"><b>636.000 VND</b></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <a href="./test.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                            aria-hidden="true"></i>&nbsp;Quay Lại</a>
+                    <a href="#" class="btn btn-primary btn-md"><i
+                            class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Bản quyền: <span>&copy;</span> Lê Văn Chiêu|Bùi Quốc Huy <br><a href="index_gttv.html">Liên Hệ Chúng Tôi</a></p>
+    </div>
+    <script>
+        var burgers = document.getElementById('burger');
+        burgers.onclick = function () {
+            burgers.classList.toggle("open");
+        }
+        $(document).ready(function () {
+            $("#burger").click(function () {
+                $(".menu").slideToggle();
+            })
+        })
+    </script>
+
+</body>
+
+</html>
